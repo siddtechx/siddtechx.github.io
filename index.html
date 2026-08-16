@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Sidd Techx — Software Developer & Bot Creator</title>
+<meta name="description" content="Sidd Techx (Siddharth) — Software Developer and Bot Creator based in France. Building with JavaScript, TypeScript, Node.js and automation tools. Speaks English, French, Spanish and Portuguese.">
+<meta name="author" content="Sidd Techx">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://siddtechx.github.io/">
+
+<!-- Open Graph / social preview -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Sidd Techx — Software Developer & Bot Creator">
+<meta property="og:description" content="Software Developer and Bot Creator based in France. JavaScript, TypeScript, Node.js and automation.">
+<meta property="og:url" content="https://siddtechx.github.io/">
+<meta property="og:site_name" content="Sidd Techx">
+<meta property="og:locale" content="en_US">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Sidd Techx — Software Developer & Bot Creator">
+<meta name="twitter:description" content="Software Developer and Bot Creator based in France. JavaScript, TypeScript, Node.js and automation.">
+<meta name="twitter:site" content="@siddtechx">
+
+<!-- Schema.org structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Sidd Techx",
+  "alternateName": ["@siddtechx", "Siddharth"],
+  "url": "https://siddtechx.github.io/",
+  "jobTitle": "Software Developer & Bot Creator",
+  "description": "Sidd Techx (Siddharth) is a software developer and bot creator based in France, working with JavaScript, TypeScript, Node.js and automation tools.",
+  "knowsLanguage": ["fr", "en", "es", "pt"],
+  "homeLocation": {
+    "@type": "Place",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "FR"
+    }
+  },
+  "sameAs": [
+    "https://github.com/siddtechx",
+    "https://www.instagram.com/siiddhrts?igsh=MW9pZzF6czdvMWcxOQ==",
+    "https://notsidd-production.up.railway.app/"
+  ]
+}
+</script>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700;800;900&family=Chakra+Petch:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap');
+
+  :root {
+    --bg: #060a12;
+    --bg-panel: #0c1220;
+    --border: #1a2438;
+    --text: #e4eaf5;
+    --text-dim: #7e8ba3;
+    --accent: #4fc3f7;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: 'Chakra Petch', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: radial-gradient(ellipse at top, #0d1526 0%, #060a12 60%);
+    color: var(--text);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    font-weight: 500;
+  }
+
+  .noise {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.035;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  header {
+    padding: 3.5rem 1.5rem 2rem;
+    text-align: center;
+    position: relative;
+  }
+  header::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: min(90%, 640px);
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--accent), transparent);
+    opacity: 0.4;
+    filter: blur(1px);
+    top: 1.5rem;
+  }
+  .eyebrow {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.62rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.85rem;
+    font-weight: 700;
+  }
+  header h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: clamp(1.8rem, 6vw, 2.6rem);
+    font-weight: 800;
+    text-transform: uppercase;
+    margin: 0 0 0.35rem;
+    letter-spacing: 0.02em;
+    text-shadow: 0 0 14px rgba(79,195,247,0.35), 0 0 32px rgba(79,195,247,0.15);
+  }
+  .signature {
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: clamp(0.75rem, 2.2vw, 0.9rem);
+    color: var(--accent);
+    display: block;
+    margin: -0.2rem 0 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    opacity: 0.85;
+  }
+  header p.tagline {
+    color: var(--text-dim);
+    font-size: 0.8rem;
+    margin: 0 0 1.4rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+  .meta-row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.6rem;
+  }
+  .pill {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.65rem;
+    padding: 0.32rem 0.7rem;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    color: var(--text-dim);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    letter-spacing: 0.08em;
+  }
+
+  .cta {
+    display: inline-block;
+    background: var(--accent);
+    color: #04101c;
+    font-weight: 700;
+    padding: 0.6rem 1.3rem;
+    border-radius: 7px;
+    text-decoration: none;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    box-shadow: 0 0 25px rgba(79,195,247,0.35);
+  }
+  .cta:hover { transform: translateY(-2px); box-shadow: 0 0 35px rgba(79,195,247,0.55); }
+
+  main {
+    max-width: 560px;
+    margin: 0 auto;
+    padding: 0.5rem 1.5rem 3rem;
+  }
+  section { margin-bottom: 2rem; }
+  h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--accent);
+    margin-bottom: 0.7rem;
+  }
+  p { color: #b9c2d4; font-weight: 400; font-size: 0.88rem; }
+  .info-cell .value, .links a, .cta, .eyebrow, .pill { font-weight: 700; }
+
+  .info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .info-cell {
+    background: var(--bg-panel);
+    padding: 0.8rem 1rem;
+  }
+  .info-cell .label {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--text-dim);
+    margin-bottom: 0.3rem;
+  }
+  .info-cell .value {
+    font-size: 0.82rem;
+    color: var(--text);
+    font-weight: 500;
+  }
+
+  .links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.7rem;
+  }
+  .links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.5rem 0.9rem;
+    background: var(--bg-panel);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    color: var(--text);
+    text-decoration: none;
+    font-size: 0.78rem;
+    font-weight: 500;
+    transition: border-color 0.15s ease, background 0.15s ease;
+  }
+  .links a:hover { border-color: var(--accent); background: #16181d; }
+
+  footer {
+    text-align: center;
+    color: #5c5e64;
+    font-size: 0.7rem;
+    padding: 1.5rem 1.5rem;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<div class="noise"></div>
+
+<header>
+  <div class="eyebrow">Software Developer</div>
+  <h1>Sidd Techx</h1>
+  <span class="signature">Siddharth</span>
+  <p class="tagline">Building bots, tools and automation — from France</p>
+
+  <div class="meta-row">
+    <span class="pill">📍 France</span>
+    <span class="pill">🗣 FR · EN · ES · PT</span>
+  </div>
+</header>
+
+<main>
+  <section>
+    <h2>About</h2>
+    <p>
+      Sidd Techx, also known as Siddharth, is a software developer and bot creator
+      based in France. Focused on JavaScript, TypeScript, Node.js, automation
+      and open-source tools, with projects spanning bots, scripts and developer utilities.
+    </p>
+  </section>
+
+  <section>
+    <h2>Profile</h2>
+    <div class="info-grid">
+      <div class="info-cell">
+        <div class="label">Developer name</div>
+        <div class="value">Sidd Techx</div>
+      </div>
+      <div class="info-cell">
+        <div class="label">Real name</div>
+        <div class="value">Siddharth</div>
+      </div>
+      <div class="info-cell">
+        <div class="label">Location</div>
+        <div class="value">France</div>
+      </div>
+      <div class="info-cell">
+        <div class="label">Languages</div>
+        <div class="value">French, English, Spanish, Portuguese</div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Projects</h2>
+    <p>
+      Open-source bots, automation scripts and developer tools.
+      The full list of repositories is available on GitHub, and live
+      projects are showcased on the website above.
+    </p>
+  </section>
+
+  <section>
+    <h2>Find me online</h2>
+    <div class="links">
+      <a class="cta" href="https://notsidd-production.up.railway.app/" target="_blank" rel="noopener">Website</a>
+      <a href="https://github.com/siddtechx" rel="me noopener">GitHub</a>
+      <a href="https://www.instagram.com/siiddhrts?igsh=MW9pZzF6czdvMWcxOQ==" rel="me noopener">Instagram</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  © 2026 Sidd Techx — Siddharth
+</footer>
+
+</body>
+</html>
