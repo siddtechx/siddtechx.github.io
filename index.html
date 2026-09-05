@@ -5,38 +5,28 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <meta name="theme-color" content="#050505">
 <title>SIDD TECHX — CONTROL CENTER</title>
-<meta name="description" content="Sidd Techx (Siddharths) — Software Developer and Bot Creator based in France. Building with JavaScript, TypeScript, Node.js and automation tools.">
+<meta name="description" content="Sidd Techx — Software Developer and Bot Creator.">
 <meta name="author" content="Sidd Techx">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://siddtechx.github.io/">
-
-<!-- Open Graph / social preview -->
 <meta property="og:type" content="website">
 <meta property="og:title" content="SIDD TECHX — CONTROL CENTER">
-<meta property="og:description" content="Software Developer and Bot Creator based in France. JavaScript, TypeScript, Node.js and automation.">
+<meta property="og:description" content="Software Developer and Bot Creator.">
 <meta property="og:url" content="https://siddtechx.github.io/">
 <meta property="og:site_name" content="Sidd Techx">
 <meta property="og:locale" content="en_US">
-
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SIDD TECHX — CONTROL CENTER">
-<meta name="twitter:description" content="Software Developer and Bot Creator based in France. JavaScript, TypeScript, Node.js and automation.">
-
+<meta name="twitter:description" content="Software Developer and Bot Creator.">
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Sidd Techx",
-  "alternateName": ["@siddtechx", "Siddharths"],
-  "url": "https://siddtechx.github.io/",
-  "jobTitle": "Software Developer & Bot Creator",
-  "description": "Sidd Techx (Siddharths) is a software developer and bot creator based in France, working with JavaScript, TypeScript, Node.js and automation tools.",
-  "knowsLanguage": ["fr", "en", "es", "pt"],
-  "homeLocation": {
-    "@type": "Place",
-    "address": { "@type": "PostalAddress", "addressCountry": "FR" }
-  },
-  "sameAs": [
+  "@context":"https://schema.org",
+  "@type":"Person",
+  "name":"Sidd Techx",
+  "alternateName":["@siddtechx","Siddharths"],
+  "url":"https://siddtechx.github.io/",
+  "jobTitle":"Software Developer & Bot Creator",
+  "sameAs":[
     "https://github.com/siddtechx",
     "https://www.instagram.com/siiddhrts?igsh=MW9pZzF6czdvMWcxOQ==",
     "https://sidd-xmd.up.railway.app",
@@ -44,13 +34,11 @@
   ]
 }
 </script>
-
 <link rel="icon" href="https://files.catbox.moe/kec03n.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-
 :root{--red:#ff182d;--red2:#ff3348;--bg:#000;--panel:#090909;--white:#f5f5f5;--muted:#707070;--line:#242424;--green:#2edb72;--display:'Orbitron',sans-serif;--body:'Space Grotesk',sans-serif;--sidebar:315px}
 *{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
 body{font-family:var(--body);background:#000;color:var(--white);min-height:100vh;overflow-x:hidden;font-size:14px}
@@ -67,350 +55,153 @@ body:after{content:"";position:fixed;inset:0;z-index:-1;opacity:.025;pointer-eve
 main{min-height:100vh;margin-left:var(--sidebar);padding:91px 26px 55px}.container{width:min(900px,100%);margin:auto}.hero{padding:22px 0 32px}
 .kicker{display:inline-flex;align-items:center;gap:8px;color:#8b4c54;border:1px solid #351016;background:#100507;border-radius:25px;padding:8px 13px;font-size:8px;letter-spacing:2px;font-weight:700}.kicker i{width:5px;height:5px;border-radius:50%;background:var(--red);box-shadow:0 0 9px var(--red)}
 h1{margin-top:28px;max-width:760px;font-family:var(--display);font-size:clamp(30px,4.7vw,56px);line-height:1.04;letter-spacing:-1.5px}h1 span{color:var(--red)}.hero p{max-width:650px;margin-top:17px;color:#707070;font-size:13px;line-height:1.7}
-.card,.pair-card{background:linear-gradient(145deg,#0b0b0b,#070707);border:1px solid #242424;border-radius:17px;padding:22px;box-shadow:0 20px 55px rgba(0,0,0,.38)}
-label{display:block;color:#aaa;font-size:10px;font-weight:700;letter-spacing:1px;margin:0 0 8px}
+.card{background:linear-gradient(145deg,#0b0b0b,#070707);border:1px solid #242424;border-radius:17px;padding:22px;box-shadow:0 20px 55px rgba(0,0,0,.38)}
 .btn{width:100%;min-height:49px;border:1px solid #2d2d2d;border-radius:12px;background:#101010;color:#fff;font:700 10px var(--body);letter-spacing:1px;cursor:pointer;margin-top:13px;transition:.2s}.btn:hover{border-color:#4b4b4b;transform:translateY(-1px)}.btn-red{background:var(--red);border-color:var(--red);box-shadow:0 9px 25px rgba(255,24,45,.14)}.btn-red:hover{background:var(--red2)}
 .page-title{margin:18px 0 25px}.page-title h1{margin-top:0;font-size:clamp(27px,4vw,45px)}.page-title p{margin-top:11px;color:#666;font-size:12px;line-height:1.7}
 .card-title{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:17px}.card-title h2{font-family:var(--display);font-size:11px;letter-spacing:1px}.badge{border:1px solid #303030;border-radius:25px;padding:6px 8px;color:#777;font-size:7px;letter-spacing:1px}.badge.ready{color:#5ad98c;border-color:#1f4e36}
-.stat{display:flex;justify-content:space-between;align-items:center;padding:11px 0;border-bottom:1px solid #1c1c1c}.stat:last-child{border-bottom:0}.stat span:first-child{color:#666;font-size:9px;text-transform:uppercase;letter-spacing:1px}.stat strong{font-size:10px}.dot{display:inline-block;width:6px;height:6px;margin-right:5px;border-radius:50%;background:#555}.dot.on{background:var(--green);box-shadow:0 0 8px rgba(46,219,114,.6)}
 .about{color:#707070;font-size:10px;line-height:1.9}.about b{color:#eee}
 .contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.contact-item{display:flex;flex-direction:column;gap:8px;padding:16px;background:#050505;border:1px solid #202020;border-radius:12px;text-decoration:none;color:#fff;transition:.2s}.contact-item:hover{border-color:#4b1018;transform:translateY(-2px);background:#080808}.contact-icon{font-size:20px;color:var(--red)}.contact-item strong{font-size:11px}.contact-item span{font-size:9px;color:#666;word-break:break-word}.contact-note{margin-top:15px;color:#555;font-size:9px;line-height:1.7}
 @media(max-width:600px){.contact-grid{grid-template-columns:1fr}}
-.info-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden;margin-top:14px}
-.info-cell{background:#050505;padding:14px 16px}.info-cell .label{font-size:8px;text-transform:uppercase;letter-spacing:1.5px;color:#555;margin-bottom:6px;font-weight:700}.info-cell .value{font-size:11px;color:#eee;font-weight:500}
+.info-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden;margin-top:14px}.info-cell{background:#050505;padding:14px 16px}.info-cell .label{font-size:8px;text-transform:uppercase;letter-spacing:1.5px;color:#555;margin-bottom:6px;font-weight:700}.info-cell .value{font-size:11px;color:#eee;font-weight:500}
 @media(max-width:600px){.info-grid{grid-template-columns:1fr}}
-.project-grid{display:flex;flex-direction:column;gap:10px}
-.project-item{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:16px;background:#050505;border:1px solid #202020;border-radius:12px;text-decoration:none;color:#fff;transition:.2s}
-.project-item:hover{border-color:#4b1018;background:#080808;transform:translateY(-2px)}
-.project-left{display:flex;align-items:center;gap:14px;min-width:0}
-.project-icon{width:42px;height:42px;flex:0 0 42px;border-radius:11px;border:1px solid #351016;background:#100507;display:grid;place-items:center;color:var(--red);font-size:17px}
-.project-text strong{display:block;font-size:12px;margin-bottom:3px}.project-text span{display:block;font-size:9px;color:#666;word-break:break-all}
-.project-arrow{color:#555;font-size:15px;flex:0 0 auto}
-.channel-grid{display:flex;flex-direction:column;gap:10px;margin-top:8px}
-.link-list{margin-top:26px}
-.link-list-title{color:#4d4d4d;font-size:8px;letter-spacing:1.7px;text-transform:uppercase;margin:0 0 10px}
-.country-row{display:flex;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid #1c1c1c}.country-row:last-child{border-bottom:0}
-.country-flag{font-size:18px;flex:0 0 auto}
-.country-info{flex:1;min-width:0}.country-name{font-size:11px;color:#eee;margin-bottom:6px;display:flex;justify-content:space-between;gap:8px}.country-name b{color:var(--red);font-family:var(--display);font-size:10px}
-.country-bar{height:6px;border-radius:4px;background:#171717;overflow:hidden}.country-bar-fill{height:100%;background:linear-gradient(90deg,var(--red),var(--red2));border-radius:4px;transition:width .6s ease}
-.view-total{display:flex;align-items:center;justify-content:space-between;padding:20px;background:#050505;border:1px dashed #3b3b3b;border-radius:12px;margin-bottom:18px}
-.view-total .num{font-family:var(--display);font-size:32px;color:var(--red);letter-spacing:-1px}.view-total .lbl{color:#555;font-size:9px;letter-spacing:1.5px;text-transform:uppercase}
-.disclaimer{margin-top:16px;padding-top:14px;border-top:1px solid #1f1f1f;color:#555;font-size:9px;line-height:1.8}
-footer{margin-left:var(--sidebar);border-top:1px solid #1c1c1c;text-align:center;padding:20px;color:#4d4d4d;font-size:8px}footer b{color:#999;font-family:var(--display);letter-spacing:1px}
+.project-grid,.channel-grid{display:flex;flex-direction:column;gap:10px}.channel-grid{margin-top:8px}
+.project-item{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:16px;background:#050505;border:1px solid #202020;border-radius:12px;text-decoration:none;color:#fff;transition:.2s}.project-item:hover{border-color:#4b1018;background:#080808;transform:translateY(-2px)}
+.project-left{display:flex;align-items:center;gap:14px;min-width:0}.project-icon{width:42px;height:42px;flex:0 0 42px;border-radius:11px;border:1px solid #351016;background:#100507;display:grid;place-items:center;color:var(--red);font-size:17px}.project-text strong{display:block;font-size:12px;margin-bottom:3px}.project-text span{display:block;font-size:9px;color:#666;word-break:break-all}.project-arrow{color:#555;font-size:15px;flex:0 0 auto}
+.view-total{display:flex;align-items:center;justify-content:center;padding:28px 20px;background:#050505;border:1px dashed #3b3b3b;border-radius:12px}.view-total .num{font-family:var(--display);font-size:42px;color:var(--red);letter-spacing:-1px;text-align:center}.view-total .lbl{color:#555;font-size:9px;letter-spacing:1.5px;text-transform:uppercase;text-align:center}
+.disclaimer{margin-top:16px;padding-top:14px;border-top:1px solid #1f1f1f;color:#555;font-size:9px;line-height:1.8}footer{margin-left:var(--sidebar);border-top:1px solid #1c1c1c;text-align:center;padding:20px;color:#4d4d4d;font-size:8px}footer b{color:#999;font-family:var(--display);letter-spacing:1px}
 @media(max-width:850px){.sidebar{transform:translateX(-105%)}body.sidebar-open .sidebar{transform:translateX(0)}main,footer{margin-left:0}}
 @media(max-width:600px){.topbar{height:60px;padding:0 13px}.menu-btn{width:39px;height:39px}.breadcrumb{font-size:8px;letter-spacing:1px}.online{padding:7px 10px;font-size:8px}main{padding:78px 13px 45px}.hero{padding:18px 0 25px}.kicker{font-size:7px;letter-spacing:1.3px;padding:7px 10px}h1{margin-top:22px;font-size:29px;letter-spacing:-1px}.hero p{font-size:11px}.card{padding:17px;border-radius:14px}.sidebar{width:min(82vw,290px);padding:28px 18px 20px}.sidebar-head{margin-bottom:42px}}
 @media(max-width:400px){.breadcrumb{display:none}h1{font-size:27px}}
-
-.page{display:none;animation:pageIn .22s ease}
-.page.active{display:block}
-@keyframes pageIn{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:none}}
+.page{display:none;animation:pageIn .22s ease}.page.active{display:block}@keyframes pageIn{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:none}}
 </style>
 </head>
-
 <body>
-
 <aside class="sidebar">
   <div class="sidebar-head">
     <img class="sidebar-logo" src="https://files.catbox.moe/m8yni9.png" alt="SIDD TECHX">
-    <div class="sidebar-brand">
-      <strong>SIDD TECHX</strong>
-      <small>CONTROL CENTER</small>
-    </div>
+    <div class="sidebar-brand"><strong>SIDD TECHX</strong><small>CONTROL CENTER</small></div>
   </div>
-
   <div class="side-label">MENU</div>
   <nav class="side-nav">
-    <a href="#home" data-page="home" class="active">
-      <span class="side-icon">➜</span>Home
-    </a>
-    <a href="#projects" data-page="projects">
-      <span class="side-icon">›</span>Projects
-    </a>
-    <a href="#status" data-page="status">
-      <span class="side-icon">⌁</span>Status
-    </a>
-    <a href="#contact" data-page="contact">
-      <span class="side-icon">✉</span>Contact
-    </a>
+    <a href="#home" data-page="home" class="active"><span class="side-icon">➜</span>Home</a>
+    <a href="#projects" data-page="projects"><span class="side-icon">›</span>Projects</a>
+    <a href="#status" data-page="status"><span class="side-icon">⌁</span>Status</a>
+    <a href="#contact" data-page="contact"><span class="side-icon">✉</span>Contact</a>
   </nav>
-
-  <div class="sidebar-bottom">
-    <strong>BLACK / RED / WHITE</strong>
-    © 2026 SIDD TECHX OFC<br>
-    CONTROL CENTER V1.0.0
-  </div>
+  <div class="sidebar-bottom"><strong>BLACK / RED / WHITE</strong>© 2026 SIDD TECHX OFC<br>CONTROL CENTER V1.0.0</div>
 </aside>
-
 <div class="overlay" onclick="closeMenu()"></div>
-
 <header class="topbar">
   <div class="top-left">
-    <button class="menu-btn" onclick="toggleMenu()" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </button>
-    <div class="breadcrumb">
-      CONTROL CENTER <b>/</b> <span id="breadcrumbPage">HOME</span>
-    </div>
+    <button class="menu-btn" onclick="toggleMenu()" aria-label="Menu"><span></span><span></span><span></span></button>
+    <div class="breadcrumb">CONTROL CENTER <b>/</b> <span id="breadcrumbPage">HOME</span></div>
   </div>
-
-  <div class="online">
-    <span class="online-dot"></span>
-    <span>ONLINE</span>
-  </div>
+  <div class="online"><span class="online-dot"></span><span>ONLINE</span></div>
 </header>
-
-<main>
-<div class="container">
-
+<main><div class="container">
 <section id="page-home" class="page active">
-<div class="container">
-<section class="hero">
-  <div class="kicker"><i></i> SOFTWARE DEVELOPER • BOT CREATOR</div>
-  <h1>SIDD <span>TECHX</span><br>OFC</h1>
-  <p>SOFTWARE DEVELOPER AND BOT CREATOR BASED IN FRANCE. BUILDING WITH JAVASCRIPT, TYPESCRIPT, NODE.JS AND AUTOMATION TOOLS.</p>
-</section>
-
-<section class="card">
-  <div class="card-title"><h2>PROFILE</h2><span class="badge">SIDDHARTHS</span></div>
-  <div class="info-grid">
-    <div class="info-cell"><div class="label">DEVELOPER NAME</div><div class="value">SIDD TECHX</div></div>
-    <div class="info-cell"><div class="label">REAL NAME</div><div class="value">SIDDHARTHS</div></div>
-    <div class="info-cell"><div class="label">LOCATION</div><div class="value">FRANCE</div></div>
-    <div class="info-cell"><div class="label">LANGUAGES</div><div class="value">FRENCH, ENGLISH, SPANISH, PORTUGUESE</div></div>
-  </div>
-  <div class="about" style="margin-top:18px">
-    <b>SIDD TECHX</b>, ALSO KNOWN AS SIDDHARTHS, IS A SOFTWARE DEVELOPER AND BOT CREATOR BASED IN FRANCE. FOCUSED ON JAVASCRIPT, TYPESCRIPT, NODE.JS, AUTOMATION AND OPEN-SOURCE TOOLS, WITH PROJECTS SPANNING BOTS, SCRIPTS AND DEVELOPER UTILITIES.
-  </div>
-</section>
-</div>
+  <section class="hero">
+    <div class="kicker"><i></i> SOFTWARE DEVELOPER • BOT CREATOR</div>
+    <h1>SIDD <span>TECHX</span><br>OFC</h1>
+    <p>SOFTWARE DEVELOPER AND BOT CREATOR BASED IN FRANCE. BUILDING WITH JAVASCRIPT, TYPESCRIPT, NODE.JS AND AUTOMATION TOOLS.</p>
+  </section>
+  <section class="card">
+    <div class="card-title"><h2>PROFILE</h2><span class="badge">SIDDHARTHS</span></div>
+    <div class="info-grid">
+      <div class="info-cell"><div class="label">DEVELOPER NAME</div><div class="value">SIDD TECHX</div></div>
+      <div class="info-cell"><div class="label">REAL NAME</div><div class="value">SIDDHARTHS</div></div>
+      <div class="info-cell"><div class="label">LOCATION</div><div class="value">FRANCE</div></div>
+      <div class="info-cell"><div class="label">LANGUAGES</div><div class="value">FRENCH, ENGLISH, SPANISH, PORTUGUESE</div></div>
+    </div>
+    <div class="about" style="margin-top:18px"><b>SIDD TECHX</b>, ALSO KNOWN AS SIDDHARTHS, IS A SOFTWARE DEVELOPER AND BOT CREATOR BASED IN FRANCE. FOCUSED ON JAVASCRIPT, TYPESCRIPT, NODE.JS, AUTOMATION AND OPEN-SOURCE TOOLS, WITH PROJECTS SPANNING BOTS, SCRIPTS AND DEVELOPER UTILITIES.</div>
+  </section>
 </section>
 
 <section id="page-projects" class="page">
-<div class="container">
-<section class="page-title"><h1>MY <span>PROJECTS</span></h1><p>LIVE PROJECTS, BOTS AND CHANNELS BUILT BY SIDD TECHX OFC.</p></section>
-
-<section class="card">
-  <div class="card-title"><h2>LIVE PROJECTS</h2><span class="badge">SIDD MINI BOT</span></div>
-  <div class="project-grid">
-    <a class="project-item" href="https://sidd-xmd.up.railway.app/#pairing" target="_blank" rel="noopener">
-      <div class="project-left"><div class="project-icon">⌁</div><div class="project-text"><strong>SIDD XMD</strong><span>sidd-xmd.up.railway.app/#pairing</span></div></div>
-      <div class="project-arrow">↗</div>
-    </a>
-    <a class="project-item" href="https://sidd.zone.id/#pairing" target="_blank" rel="noopener">
-      <div class="project-left"><div class="project-icon">⌁</div><div class="project-text"><strong>SIDD ZONE</strong><span>sidd.zone.id/#pairing</span></div></div>
-      <div class="project-arrow">↗</div>
-    </a>
-  </div>
-</section>
-
-<section class="card" style="margin-top:16px">
-  <div class="card-title"><h2>CHANNELS &amp; GROUPS</h2><span class="badge">WHATSAPP</span></div>
-  <div class="channel-grid">
-    <a class="project-item" href="https://whatsapp.com/channel/0029Vb84KYs7j6g98LuAon1C" target="_blank" rel="noopener">
-      <div class="project-left"><div class="project-icon">◉</div><div class="project-text"><strong>CHANNEL 1</strong><span>WHATSAPP.COM/CHANNEL/0029VB84KYS7J6G98LUAON1C</span></div></div>
-      <div class="project-arrow">↗</div>
-    </a>
-    <a class="project-item" href="https://whatsapp.com/channel/0029Vb92P7z7IUYLr0yBNA2G" target="_blank" rel="noopener">
-      <div class="project-left"><div class="project-icon">◉</div><div class="project-text"><strong>CHANNEL 2</strong><span>WHATSAPP.COM/CHANNEL/0029VB92P7Z7IUYLR0YBNA2G</span></div></div>
-      <div class="project-arrow">↗</div>
-    </a>
-    <a class="project-item" href="https://chat.whatsapp.com/Ffdns4sciUGFPsHBrwK3c0" target="_blank" rel="noopener">
-      <div class="project-left"><div class="project-icon">◎</div><div class="project-text"><strong>GROUP</strong><span>CHAT.WHATSAPP.COM/FFDNS4SCIUGFPSHBRWK3C0</span></div></div>
-      <div class="project-arrow">↗</div>
-    </a>
-  </div>
-</section>
-</div>
+  <section class="page-title"><h1>MY <span>PROJECTS</span></h1><p>LIVE PROJECTS, BOTS AND CHANNELS BUILT BY SIDD TECHX OFC.</p></section>
+  <section class="card">
+    <div class="card-title"><h2>LIVE PROJECTS</h2><span class="badge">SIDD MINI BOT</span></div>
+    <div class="project-grid">
+      <a class="project-item" href="https://sidd-xmd.up.railway.app/#pairing" target="_blank" rel="noopener"><div class="project-left"><div class="project-icon">⌁</div><div class="project-text"><strong>SIDD XMD</strong><span>sidd-xmd.up.railway.app/#pairing</span></div></div><div class="project-arrow">↗</div></a>
+      <a class="project-item" href="https://sidd.zone.id/#pairing" target="_blank" rel="noopener"><div class="project-left"><div class="project-icon">⌁</div><div class="project-text"><strong>SIDD ZONE</strong><span>sidd.zone.id/#pairing</span></div></div><div class="project-arrow">↗</div></a>
+    </div>
+  </section>
+  <section class="card" style="margin-top:16px">
+    <div class="card-title"><h2>CHANNELS &amp; GROUPS</h2><span class="badge">WHATSAPP</span></div>
+    <div class="channel-grid">
+      <a class="project-item" href="https://whatsapp.com/channel/0029Vb84KYs7j6g98LuAon1C" target="_blank" rel="noopener"><div class="project-left"><div class="project-icon">◉</div><div class="project-text"><strong>CHANNEL 1</strong><span>WHATSAPP.COM/CHANNEL/0029VB84KYS7J6G98LUAON1C</span></div></div><div class="project-arrow">↗</div></a>
+      <a class="project-item" href="https://whatsapp.com/channel/0029Vb92P7z7IUYLr0yBNA2G" target="_blank" rel="noopener"><div class="project-left"><div class="project-icon">◉</div><div class="project-text"><strong>CHANNEL 2</strong><span>WHATSAPP.COM/CHANNEL/0029VB92P7Z7IUYLR0YBNA2G</span></div></div><div class="project-arrow">↗</div></a>
+      <a class="project-item" href="https://chat.whatsapp.com/Ffdns4sciUGFPsHBrwK3c0" target="_blank" rel="noopener"><div class="project-left"><div class="project-icon">◎</div><div class="project-text"><strong>GROUP</strong><span>CHAT.WHATSAPP.COM/FFDNS4SCIUGFPSHBRWK3C0</span></div></div><div class="project-arrow">↗</div></a>
+    </div>
+  </section>
 </section>
 
 <section id="page-status" class="page">
-<div class="container">
-<section class="page-title"><h1>SITE <span>STATUS</span></h1><p>VISITOR VIEWS AND ORIGIN COUNTRIES FOR THIS CONTROL CENTER.</p></section>
-
-<section class="card">
-  <div class="card-title"><h2>VISITOR ANALYTICS</h2><span class="badge ready" id="statusBadge">LIVE</span></div>
-
-  <div class="view-total">
-    <div><div class="lbl">TOTAL VIEWS</div><div class="num" id="totalViews">0</div></div>
-    <div style="text-align:right"><div class="lbl">YOUR COUNTRY</div><div class="num" style="font-size:16px" id="yourCountry">—</div></div>
-  </div>
-
-  <div id="countryList"></div>
-
-  <div class="disclaimer">
-    <b style="color:#888">NOTE:</b> THIS COUNTER IS STORED LOCALLY IN YOUR BROWSER (NOT A SHARED GLOBAL SERVER COUNT). IT TRACKS VIEWS AND DETECTED COUNTRIES FOR VISITS MADE FROM THIS BROWSER ONLY. COUNTRY IS DETECTED VIA A PUBLIC IP LOOKUP API.
-  </div>
-</section>
-</div>
+  <section class="page-title"><h1>SITE <span>STATUS</span></h1><p>VISITOR VIEWS FOR THIS CONTROL CENTER.</p></section>
+  <section class="card">
+    <div class="card-title"><h2>VISITOR ANALYTICS</h2><span class="badge ready">LIVE</span></div>
+    <div class="view-total">
+      <div><div class="lbl">TOTAL VIEWS</div><div class="num" id="totalViews">0</div></div>
+    </div>
+    <div class="disclaimer"><b style="color:#888">NOTE:</b> THIS COUNTER IS STORED LOCALLY IN YOUR BROWSER. IT IS NOT A SHARED GLOBAL SERVER COUNT. EACH BROWSER KEEPS ITS OWN VIEW TOTAL.</div>
+  </section>
 </section>
 
 <section id="page-contact" class="page">
-<div class="container">
-<section class="page-title"><h1>CONTACT <span>ME</span></h1><p>CHOOSE YOUR PREFERRED WAY TO GET IN TOUCH WITH SIDD TECHX OFC.</p></section>
-
-<section class="card">
-  <div class="card-title"><h2>CONTACT SIDD TECHX</h2><span class="badge">GET IN TOUCH</span></div>
-  <div class="contact-grid">
-    <a class="contact-item" href="mailto:siddtechxofc@gmail.com">
-      <div class="contact-icon">✉</div><strong>EMAIL</strong><span>SIDDTECHXOFC@GMAIL.COM</span>
-    </a>
-    <a class="contact-item" href="https://wa.me/33751103165" target="_blank" rel="noopener">
-      <div class="contact-icon">◉</div><strong>WHATSAPP</strong><span>+33 7 51 10 31 65</span>
-    </a>
-    <a class="contact-item" href="https://www.instagram.com/siiddhrts?igsh=MW9pZzF6czdvMWcxOQ==" target="_blank" rel="noopener">
-      <div class="contact-icon">◎</div><strong>INSTAGRAM</strong><span>@SIIDDHRTS</span>
-    </a>
-  </div>
-  <div class="contact-note">FOR SUPPORT, QUESTIONS, OR COLLABORATION, CONTACT SIDD TECHX OFC USING ANY OF THE OPTIONS ABOVE.</div>
+  <section class="page-title"><h1>CONTACT <span>ME</span></h1><p>CHOOSE YOUR PREFERRED WAY TO GET IN TOUCH WITH SIDD TECHX OFC.</p></section>
+  <section class="card">
+    <div class="card-title"><h2>CONTACT SIDD TECHX</h2><span class="badge">GET IN TOUCH</span></div>
+    <div class="contact-grid">
+      <a class="contact-item" href="mailto:siddtechxofc@gmail.com"><div class="contact-icon">✉</div><strong>EMAIL</strong><span>SIDDTECHXOFC@GMAIL.COM</span></a>
+      <a class="contact-item" href="https://wa.me/33751103165" target="_blank" rel="noopener"><div class="contact-icon">◉</div><strong>WHATSAPP</strong><span>+33 7 51 10 31 65</span></a>
+      <a class="contact-item" href="https://www.instagram.com/siiddhrts?igsh=MW9pZzF6czdvMWcxOQ==" target="_blank" rel="noopener"><div class="contact-icon">◎</div><strong>INSTAGRAM</strong><span>@SIIDDHRTS</span></a>
+    </div>
+    <div class="contact-note">FOR SUPPORT, QUESTIONS, OR COLLABORATION, CONTACT SIDD TECHX OFC USING ANY OF THE OPTIONS ABOVE.</div>
+  </section>
+  <section class="card" style="margin-top:16px">
+    <div class="card-title"><h2>SOCIAL &amp; CODE</h2><span class="badge">FIND ME ONLINE</span></div>
+    <div class="contact-grid">
+      <a class="contact-item" href="https://github.com/siddtechx" target="_blank" rel="me noopener"><div class="contact-icon">⌘</div><strong>GITHUB</strong><span>GITHUB.COM/SIDDTECHX</span></a>
+    </div>
+  </section>
 </section>
-
-<section class="card" style="margin-top:16px">
-  <div class="card-title"><h2>SOCIAL &amp; CODE</h2><span class="badge">FIND ME ONLINE</span></div>
-  <div class="contact-grid">
-    <a class="contact-item" href="https://github.com/siddtechx" target="_blank" rel="me noopener">
-      <div class="contact-icon">⌘</div><strong>GITHUB</strong><span>GITHUB.COM/SIDDTECHX</span>
-    </a>
-  </div>
-</section>
-</div>
-</section>
-
-</div>
-</main>
-
-<footer>
-  <b>©MADE IN BY SIDD TECHX OFC • CONTROL CENTER V1.0.0</b>
-</footer>
+</div></main>
+<footer><b>©MADE IN BY SIDD TECHX OFC • CONTROL CENTER V1.0.0</b></footer>
 
 <script>
-function toggleMenu(){
-  document.body.classList.toggle('sidebar-open');
-}
-function closeMenu(){
-  document.body.classList.remove('sidebar-open');
-}
-
-const pageNames = {
-  home: 'HOME',
-  projects: 'PROJECTS',
-  status: 'STATUS',
-  contact: 'CONTACT'
-};
-
-function showPage(name, updateHash=true){
-  if(!pageNames[name]) name='home';
-
+function toggleMenu(){document.body.classList.toggle('sidebar-open')}
+function closeMenu(){document.body.classList.remove('sidebar-open')}
+const pageNames={home:'HOME',projects:'PROJECTS',status:'STATUS',contact:'CONTACT'};
+function showPage(name,updateHash=true){
+  if(!pageNames[name])name='home';
   document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
-  const target=document.getElementById('page-'+name);
-  if(target) target.classList.add('active');
-
-  document.querySelectorAll('.side-nav a').forEach(a=>{
-    a.classList.toggle('active', a.dataset.page===name);
-  });
-
+  const target=document.getElementById('page-'+name);if(target)target.classList.add('active');
+  document.querySelectorAll('.side-nav a').forEach(a=>a.classList.toggle('active',a.dataset.page===name));
   document.getElementById('breadcrumbPage').textContent=pageNames[name];
-
-  if(updateHash) history.replaceState(null,'','#'+name);
-  closeMenu();
-  window.scrollTo({top:0,behavior:'smooth'});
+  if(updateHash)history.replaceState(null,'','#'+name);
+  closeMenu();window.scrollTo({top:0,behavior:'smooth'});
 }
+document.querySelectorAll('.side-nav a').forEach(link=>link.addEventListener('click',function(e){e.preventDefault();showPage(this.dataset.page)}));
+window.addEventListener('hashchange',()=>showPage(location.hash.replace('#','')||'home',false));
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeMenu()});
+showPage(location.hash.replace('#','')||'home',false);
 
-document.querySelectorAll('.side-nav a').forEach(link=>{
-  link.addEventListener('click',function(e){
-    e.preventDefault();
-    showPage(this.dataset.page);
-  });
-});
-
-window.addEventListener('hashchange',()=>{
-  showPage(location.hash.replace('#','') || 'home', false);
-});
-
-document.addEventListener('keydown',e=>{
-  if(e.key==='Escape') closeMenu();
-});
-
-showPage(location.hash.replace('#','') || 'home', false);
-
-/* ============================================================
-   VISITOR COUNTER — stored in this browser's localStorage only.
-   This is NOT a shared/global counter across all visitors — it
-   has no backend. Each visitor's browser keeps its own tally.
-   Country is detected once per session via a free IP lookup API
-   (ipapi.co). If the lookup fails (offline, blocked, rate
-   limited), the visit is still counted under "Unknown".
-   ============================================================ */
-const FLAGS = {
-  France:'🇫🇷', 'United States':'🇺🇸', 'United Kingdom':'🇬🇧', Germany:'🇩🇪', Spain:'🇪🇸',
-  Portugal:'🇵🇹', Brazil:'🇧🇷', Nigeria:'🇳🇬', Ghana:'🇬🇭', India:'🇮🇳', Canada:'🇨🇦',
-  Morocco:'🇲🇦', Algeria:'🇩🇿', Tunisia:'🇹🇳', Senegal:'🇸🇳', 'Ivory Coast':'🇨🇮',
-  'Cote d\'Ivoire':'🇨🇮', Mali:'🇲🇱', Cameroon:'🇨🇲', 'DR Congo':'🇨🇩', Congo:'🇨🇬',
-  Belgium:'🇧🇪', Switzerland:'🇨🇭', Italy:'🇮🇹', Netherlands:'🇳🇱', Mexico:'🇲🇽',
-  Philippines:'🇵🇭', Pakistan:'🇵🇰', Bangladesh:'🇧🇩', Haïti:'🇭🇹', Unknown:'🌐'
-};
-
+/* LOCAL VIEW COUNTER — no country detection/API */
 function loadStats(){
-  try{ return JSON.parse(localStorage.getItem('siddStatusStats')||'{"total":0,"countries":{}}'); }
-  catch(e){ return {total:0,countries:{}}; }
+  try{return JSON.parse(localStorage.getItem('siddStatusStats')||'{"total":0}')}
+  catch(e){return {total:0}}
 }
-function saveStats(s){
-  localStorage.setItem('siddStatusStats', JSON.stringify(s));
-}
-
-function renderStats(){
-  const stats = loadStats();
-  document.getElementById('totalViews').textContent = stats.total;
-
-  const entries = Object.entries(stats.countries).sort((a,b)=>b[1]-a[1]);
-  const listEl = document.getElementById('countryList');
-  listEl.innerHTML = '';
-
-  if(!entries.length){
-    listEl.innerHTML = '<div style="color:#444;font-size:10px;padding:10px 0">NO DATA YET</div>';
-    return;
-  }
-
-  entries.forEach(([country,count])=>{
-    const pct = stats.total ? Math.round((count/stats.total)*100) : 0;
-    const flag = FLAGS[country] || '🌐';
-    const row = document.createElement('div');
-    row.className = 'country-row';
-    row.innerHTML = `
-      <div class="country-flag">${flag}</div>
-      <div class="country-info">
-        <div class="country-name"><span>${country.toUpperCase()}</span><b>${pct}%</b></div>
-        <div class="country-bar"><div class="country-bar-fill" style="width:${pct}%"></div></div>
-      </div>`;
-    listEl.appendChild(row);
-  });
-}
-
-async function recordVisit(){
-  const stats = loadStats();
-  const alreadyThisSession = sessionStorage.getItem('siddVisitCounted');
-
-  if(!alreadyThisSession){
-    stats.total += 1;
+function saveStats(s){localStorage.setItem('siddStatusStats',JSON.stringify(s))}
+function recordVisit(){
+  const stats=loadStats();
+  if(!sessionStorage.getItem('siddVisitCounted')){
+    stats.total+=1;
     sessionStorage.setItem('siddVisitCounted','1');
-
-    let country = 'Unknown';
-    try{
-      const r = await fetch('https://ipapi.co/json/');
-      const d = await r.json();
-      if(d && d.country_name) country = d.country_name;
-    }catch(e){ /* offline or blocked -> stays Unknown */ }
-
-    stats.countries[country] = (stats.countries[country]||0) + 1;
     saveStats(stats);
-    document.getElementById('yourCountry').textContent = country.toUpperCase();
-  } else {
-    document.getElementById('yourCountry').textContent = 'ALREADY COUNTED';
   }
-  renderStats();
+  document.getElementById('totalViews').textContent=stats.total;
 }
-
 recordVisit();
 </script>
-
 </body>
 </html>
