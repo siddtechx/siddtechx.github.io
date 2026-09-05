@@ -168,6 +168,7 @@ h1{margin-top:28px;max-width:760px;font-family:var(--display);font-size:clamp(30
 </div></main>
 <footer><b>©MADE IN BY SIDD TECHX OFC • CONTROL CENTER V1.0.0</b></footer>
 
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>
 function toggleMenu(){document.body.classList.toggle('sidebar-open')}
 function closeMenu(){document.body.classList.remove('sidebar-open')}
@@ -186,20 +187,26 @@ window.addEventListener('hashchange',()=>showPage(location.hash.replace('#','')|
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closeMenu()});
 showPage(location.hash.replace('#','')||'home',false);
 
-/* LOCAL VIEW COUNTER — no country detection/API */
-function loadStats(){
-  try{return JSON.parse(localStorage.getItem('siddStatusStats')||'{"total":0}')}
-  catch(e){return {total:0}}
-}
-function saveStats(s){localStorage.setItem('siddStatusStats',JSON.stringify(s))}
-function recordVisit(){
-  const stats=loadStats();
-  if(!sessionStorage.getItem('siddVisitCounted')){
-    stats.total+=1;
-    sessionStorage.setItem('siddVisitCounted','1');
-    saveStats(stats);
+/* GLOBAL SUPABASE VIEW COUNTER — no country detection */
+const SUPABASE_URL = "https://cuafxfptmkygmkbxdrha.supabase.co";
+const SUPABASE_PUBLISHABLE_KEY = "sb_publishable_Xax3nwoMiGBIiybqRFv8lA_HItUWjE6";
+
+async function recordVisit(){
+  const viewsEl = document.getElementById("totalViews");
+
+  try{
+    const { createClient } = window.supabase;
+    const client = createClient(SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY);
+
+    const { data, error } = await client.rpc("increment_site_views");
+    if(error) throw error;
+
+    const total = Array.isArray(data) ? data[0]?.views : data;
+    viewsEl.textContent = Number(total || 0).toLocaleString("en-US");
+  }catch(error){
+    console.error("Global view counter error:", error);
+    viewsEl.textContent = "—";
   }
-  document.getElementById('totalViews').textContent=stats.total;
 }
 recordVisit();
 </script>
