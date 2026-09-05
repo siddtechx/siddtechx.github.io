@@ -2,28 +2,26 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Sidd Techx — Software Developer & Bot Creator</title>
-<meta name="description" content="Sidd Techx (Siddharth) — Software Developer and Bot Creator based in France. Building with JavaScript, TypeScript, Node.js and automation tools. Speaks English, French, Spanish and Portuguese.">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="theme-color" content="#050505">
+<title>SIDD TECHX — CONTROL CENTER</title>
+<meta name="description" content="Sidd Techx (Siddharth) — Software Developer and Bot Creator based in France. Building with JavaScript, TypeScript, Node.js and automation tools.">
 <meta name="author" content="Sidd Techx">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://siddtechx.github.io/">
 
 <!-- Open Graph / social preview -->
 <meta property="og:type" content="website">
-<meta property="og:title" content="Sidd Techx — Software Developer & Bot Creator">
+<meta property="og:title" content="SIDD TECHX — CONTROL CENTER">
 <meta property="og:description" content="Software Developer and Bot Creator based in France. JavaScript, TypeScript, Node.js and automation.">
 <meta property="og:url" content="https://siddtechx.github.io/">
 <meta property="og:site_name" content="Sidd Techx">
 <meta property="og:locale" content="en_US">
 
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Sidd Techx — Software Developer & Bot Creator">
+<meta name="twitter:title" content="SIDD TECHX — CONTROL CENTER">
 <meta name="twitter:description" content="Software Developer and Bot Creator based in France. JavaScript, TypeScript, Node.js and automation.">
-<meta name="twitter:site" content="@siddtechx">
 
-<!-- Schema.org structured data -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -36,303 +34,400 @@
   "knowsLanguage": ["fr", "en", "es", "pt"],
   "homeLocation": {
     "@type": "Place",
-    "address": {
-      "@type": "PostalAddress",
-      "addressCountry": "FR"
-    }
+    "address": { "@type": "PostalAddress", "addressCountry": "FR" }
   },
   "sameAs": [
     "https://github.com/siddtechx",
     "https://www.instagram.com/siiddhrts?igsh=MW9pZzF6czdvMWcxOQ==",
-    "https://sidd-xmd.up.railway.app"
+    "https://sidd-xmd.up.railway.app",
+    "https://sidd.zone.id"
   ]
 }
 </script>
 
+<link rel="icon" href="https://files.catbox.moe/kec03n.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700;800;900&family=Chakra+Petch:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap');
 
-  :root {
-    --bg: #060a12;
-    --bg-panel: #0c1220;
-    --border: #1a2438;
-    --text: #e4eaf5;
-    --text-dim: #7e8ba3;
-    --accent: #4fc3f7;
-  }
-  * { box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
-  body {
-    margin: 0;
-    font-family: 'Chakra Petch', -apple-system, BlinkMacSystemFont, sans-serif;
-    background: radial-gradient(ellipse at top, #0d1526 0%, #060a12 60%);
-    color: var(--text);
-    line-height: 1.65;
-    -webkit-font-smoothing: antialiased;
-    font-weight: 500;
-  }
+:root{--red:#ff182d;--red2:#ff3348;--bg:#000;--panel:#090909;--white:#f5f5f5;--muted:#707070;--line:#242424;--green:#2edb72;--display:'Orbitron',sans-serif;--body:'Space Grotesk',sans-serif;--sidebar:315px}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{font-family:var(--body);background:#000;color:var(--white);min-height:100vh;overflow-x:hidden;font-size:14px}
+body:before{content:"";position:fixed;inset:0;z-index:-2;background:radial-gradient(circle at 75% 10%,rgba(255,24,45,.06),transparent 30%),linear-gradient(180deg,#050505,#000)}
+body:after{content:"";position:fixed;inset:0;z-index:-1;opacity:.025;pointer-events:none;background-image:linear-gradient(#fff 1px,transparent 1px),linear-gradient(90deg,#fff 1px,transparent 1px);background-size:46px 46px}
+.topbar{position:fixed;top:0;left:0;right:0;height:64px;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:0 20px;background:rgba(3,3,3,.95);border-bottom:1px solid #1d1d1d;backdrop-filter:blur(14px)}
+.top-left{display:flex;align-items:center;gap:14px}.menu-btn{width:42px;height:42px;border:1px solid #282828;border-radius:11px;background:#080808;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:4px;cursor:pointer}.menu-btn span{display:block;width:20px;height:2px;background:#999;border-radius:5px}
+.breadcrumb{color:#5d5d5d;font-size:10px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase}.breadcrumb b{color:#bbb}
+.online{display:flex;align-items:center;gap:8px;padding:8px 13px;border:1px solid #202020;border-radius:25px;background:#080808;color:#777;font-size:10px;font-weight:600}.online-dot{width:7px;height:7px;border-radius:50%;background:var(--red);box-shadow:0 0 10px rgba(255,24,45,.7)}
+.sidebar{position:fixed;top:0;left:0;bottom:0;width:var(--sidebar);z-index:300;background:#070707;border-right:1px solid #202020;padding:32px 22px 22px;display:flex;flex-direction:column;box-shadow:18px 0 60px rgba(0,0,0,.4);transition:transform .3s}
+.sidebar-head{display:flex;align-items:center;gap:12px;margin-bottom:52px}.sidebar-logo{width:48px;height:48px;object-fit:cover;border-radius:13px;border:1px solid #292929}.sidebar-brand strong{display:block;font-family:var(--display);font-size:12px;letter-spacing:.8px}.sidebar-brand small{display:block;color:#626262;font-size:8px;letter-spacing:1.7px;margin-top:4px}
+.side-label{color:#4e4e4e;font-size:9px;font-weight:700;letter-spacing:3px;margin:0 0 12px 14px}.side-nav{display:flex;flex-direction:column;gap:5px}.side-nav a{position:relative;width:100%;min-height:57px;border:1px solid transparent;border-radius:13px;background:transparent;color:#818181;text-decoration:none;padding:0 15px;display:flex;align-items:center;gap:14px;font:500 14px var(--body);transition:.2s}.side-nav a:hover{color:#eee;background:#0d0d0d}.side-nav a.active{color:#eee;background:linear-gradient(90deg,#180306,#0d0d0d);border-color:#431017}.side-nav a.active:before{content:"";position:absolute;left:-1px;top:13px;bottom:13px;width:3px;border-radius:0 4px 4px 0;background:var(--red)}.side-icon{width:22px;display:grid;place-items:center;color:#a91525;font-size:17px}
+.sidebar-bottom{margin-top:auto;color:#454545;font-size:9px;line-height:1.9}.sidebar-bottom strong{display:block;color:#686868;font-size:8px;letter-spacing:1px}.overlay{position:fixed;inset:0;z-index:250;background:rgba(0,0,0,.72);opacity:0;visibility:hidden;transition:.25s}body.sidebar-open .overlay{opacity:1;visibility:visible}
+main{min-height:100vh;margin-left:var(--sidebar);padding:91px 26px 55px}.container{width:min(900px,100%);margin:auto}.hero{padding:22px 0 32px}
+.kicker{display:inline-flex;align-items:center;gap:8px;color:#8b4c54;border:1px solid #351016;background:#100507;border-radius:25px;padding:8px 13px;font-size:8px;letter-spacing:2px;font-weight:700}.kicker i{width:5px;height:5px;border-radius:50%;background:var(--red);box-shadow:0 0 9px var(--red)}
+h1{margin-top:28px;max-width:760px;font-family:var(--display);font-size:clamp(30px,4.7vw,56px);line-height:1.04;letter-spacing:-1.5px}h1 span{color:var(--red)}.hero p{max-width:650px;margin-top:17px;color:#707070;font-size:13px;line-height:1.7}
+.card,.pair-card{background:linear-gradient(145deg,#0b0b0b,#070707);border:1px solid #242424;border-radius:17px;padding:22px;box-shadow:0 20px 55px rgba(0,0,0,.38)}
+label{display:block;color:#aaa;font-size:10px;font-weight:700;letter-spacing:1px;margin:0 0 8px}
+.btn{width:100%;min-height:49px;border:1px solid #2d2d2d;border-radius:12px;background:#101010;color:#fff;font:700 10px var(--body);letter-spacing:1px;cursor:pointer;margin-top:13px;transition:.2s}.btn:hover{border-color:#4b4b4b;transform:translateY(-1px)}.btn-red{background:var(--red);border-color:var(--red);box-shadow:0 9px 25px rgba(255,24,45,.14)}.btn-red:hover{background:var(--red2)}
+.page-title{margin:18px 0 25px}.page-title h1{margin-top:0;font-size:clamp(27px,4vw,45px)}.page-title p{margin-top:11px;color:#666;font-size:12px;line-height:1.7}
+.card-title{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:17px}.card-title h2{font-family:var(--display);font-size:11px;letter-spacing:1px}.badge{border:1px solid #303030;border-radius:25px;padding:6px 8px;color:#777;font-size:7px;letter-spacing:1px}.badge.ready{color:#5ad98c;border-color:#1f4e36}
+.stat{display:flex;justify-content:space-between;align-items:center;padding:11px 0;border-bottom:1px solid #1c1c1c}.stat:last-child{border-bottom:0}.stat span:first-child{color:#666;font-size:9px;text-transform:uppercase;letter-spacing:1px}.stat strong{font-size:10px}.dot{display:inline-block;width:6px;height:6px;margin-right:5px;border-radius:50%;background:#555}.dot.on{background:var(--green);box-shadow:0 0 8px rgba(46,219,114,.6)}
+.about{color:#707070;font-size:10px;line-height:1.9}.about b{color:#eee}
+.contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.contact-item{display:flex;flex-direction:column;gap:8px;padding:16px;background:#050505;border:1px solid #202020;border-radius:12px;text-decoration:none;color:#fff;transition:.2s}.contact-item:hover{border-color:#4b1018;transform:translateY(-2px);background:#080808}.contact-icon{font-size:20px;color:var(--red)}.contact-item strong{font-size:11px}.contact-item span{font-size:9px;color:#666;word-break:break-word}.contact-note{margin-top:15px;color:#555;font-size:9px;line-height:1.7}
+@media(max-width:600px){.contact-grid{grid-template-columns:1fr}}
+.info-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden;margin-top:14px}
+.info-cell{background:#050505;padding:14px 16px}.info-cell .label{font-size:8px;text-transform:uppercase;letter-spacing:1.5px;color:#555;margin-bottom:6px;font-weight:700}.info-cell .value{font-size:11px;color:#eee;font-weight:500}
+@media(max-width:600px){.info-grid{grid-template-columns:1fr}}
+.project-grid{display:flex;flex-direction:column;gap:10px}
+.project-item{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:16px;background:#050505;border:1px solid #202020;border-radius:12px;text-decoration:none;color:#fff;transition:.2s}
+.project-item:hover{border-color:#4b1018;background:#080808;transform:translateY(-2px)}
+.project-left{display:flex;align-items:center;gap:14px;min-width:0}
+.project-icon{width:42px;height:42px;flex:0 0 42px;border-radius:11px;border:1px solid #351016;background:#100507;display:grid;place-items:center;color:var(--red);font-size:17px}
+.project-text strong{display:block;font-size:12px;margin-bottom:3px}.project-text span{display:block;font-size:9px;color:#666;word-break:break-all}
+.project-arrow{color:#555;font-size:15px;flex:0 0 auto}
+.channel-grid{display:flex;flex-direction:column;gap:10px;margin-top:8px}
+.link-list{margin-top:26px}
+.link-list-title{color:#4d4d4d;font-size:8px;letter-spacing:1.7px;text-transform:uppercase;margin:0 0 10px}
+.country-row{display:flex;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid #1c1c1c}.country-row:last-child{border-bottom:0}
+.country-flag,.browser-icon{font-size:18px;flex:0 0 auto;width:22px;text-align:center}
+.country-info{flex:1;min-width:0}.country-name{font-size:11px;color:#eee;margin-bottom:6px;display:flex;justify-content:space-between;gap:8px}.country-name b{color:var(--red);font-family:var(--display);font-size:10px}
+.country-bar{height:6px;border-radius:4px;background:#171717;overflow:hidden}.country-bar-fill{height:100%;background:linear-gradient(90deg,var(--red),var(--red2));border-radius:4px;transition:width .6s ease}
+.view-total{display:flex;align-items:center;justify-content:space-between;padding:20px;background:#050505;border:1px dashed #3b3b3b;border-radius:12px;margin-bottom:18px}
+.view-total .num{font-family:var(--display);font-size:32px;color:var(--red);letter-spacing:-1px}.view-total .lbl{color:#555;font-size:9px;letter-spacing:1.5px;text-transform:uppercase}
+.disclaimer{margin-top:16px;padding-top:14px;border-top:1px solid #1f1f1f;color:#555;font-size:9px;line-height:1.8}
+footer{margin-left:var(--sidebar);border-top:1px solid #1c1c1c;text-align:center;padding:20px;color:#4d4d4d;font-size:8px}footer b{color:#999;font-family:var(--display);letter-spacing:1px}
+@media(max-width:850px){.sidebar{transform:translateX(-105%)}body.sidebar-open .sidebar{transform:translateX(0)}main,footer{margin-left:0}}
+@media(max-width:600px){.topbar{height:60px;padding:0 13px}.menu-btn{width:39px;height:39px}.breadcrumb{font-size:8px;letter-spacing:1px}.online{padding:7px 10px;font-size:8px}main{padding:78px 13px 45px}.hero{padding:18px 0 25px}.kicker{font-size:7px;letter-spacing:1.3px;padding:7px 10px}h1{margin-top:22px;font-size:29px;letter-spacing:-1px}.hero p{font-size:11px}.card{padding:17px;border-radius:14px}.sidebar{width:min(82vw,290px);padding:28px 18px 20px}.sidebar-head{margin-bottom:42px}}
+@media(max-width:400px){.breadcrumb{display:none}h1{font-size:27px}}
 
-  .noise {
-    position: fixed;
-    inset: 0;
-    pointer-events: none;
-    opacity: 0.035;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-  }
-
-  header {
-    padding: 3.5rem 1.5rem 2rem;
-    text-align: center;
-    position: relative;
-  }
-  header::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: min(90%, 640px);
-    height: 3px;
-    background: linear-gradient(90deg, transparent, var(--accent), transparent);
-    opacity: 0.4;
-    filter: blur(1px);
-    top: 1.5rem;
-  }
-  .eyebrow {
-    font-family: 'Space Mono', monospace;
-    font-size: 0.62rem;
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
-    color: var(--accent);
-    margin-bottom: 0.85rem;
-    font-weight: 700;
-  }
-  header h1 {
-    font-family: 'Orbitron', sans-serif;
-    font-size: clamp(1.8rem, 6vw, 2.6rem);
-    font-weight: 800;
-    text-transform: uppercase;
-    margin: 0 0 0.35rem;
-    letter-spacing: 0.02em;
-    text-shadow: 0 0 14px rgba(79,195,247,0.35), 0 0 32px rgba(79,195,247,0.15);
-  }
-  .signature {
-    font-family: 'Chakra Petch', sans-serif;
-    font-size: clamp(0.75rem, 2.2vw, 0.9rem);
-    color: var(--accent);
-    display: block;
-    margin: -0.2rem 0 0.85rem;
-    font-weight: 500;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    opacity: 0.85;
-  }
-  header p.tagline {
-    color: var(--text-dim);
-    font-size: 0.8rem;
-    margin: 0 0 1.4rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-  }
-  .meta-row {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    margin-bottom: 1.6rem;
-  }
-  .pill {
-    font-family: 'Space Mono', monospace;
-    font-size: 0.65rem;
-    padding: 0.32rem 0.7rem;
-    border: 1px solid var(--border);
-    border-radius: 999px;
-    color: var(--text-dim);
-    display: inline-flex;
-    align-items: center;
-    gap: 0.4rem;
-    letter-spacing: 0.08em;
-  }
-
-  .cta {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.4rem;
-    background: var(--accent);
-    color: #04101c;
-    font-weight: 700;
-    padding: 0.6rem 1.3rem;
-    border-radius: 7px;
-    text-decoration: none;
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-    transition: transform 0.15s ease, box-shadow 0.15s ease;
-    box-shadow: 0 0 25px rgba(79,195,247,0.35);
-  }
-  .cta:hover { transform: translateY(-2px); box-shadow: 0 0 35px rgba(79,195,247,0.55); }
-  .cta svg { width: 14px; height: 14px; }
-
-  main {
-    max-width: 560px;
-    margin: 0 auto;
-    padding: 0.5rem 1.5rem 3rem;
-  }
-  section { margin-bottom: 2rem; }
-  h2 {
-    font-family: 'Orbitron', sans-serif;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    color: var(--accent);
-    margin-bottom: 0.7rem;
-  }
-  p { color: #b9c2d4; font-weight: 400; font-size: 0.88rem; }
-  .info-cell .value, .links a, .cta, .eyebrow, .pill { font-weight: 700; }
-
-  .info-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1px;
-    background: var(--border);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    overflow: hidden;
-  }
-  .info-cell {
-    background: var(--bg-panel);
-    padding: 0.8rem 1rem;
-  }
-  .info-cell .label {
-    font-family: 'Space Mono', monospace;
-    font-size: 0.6rem;
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
-    color: var(--text-dim);
-    margin-bottom: 0.3rem;
-  }
-  .info-cell .value {
-    font-size: 0.82rem;
-    color: var(--text);
-    font-weight: 500;
-  }
-
-  .links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.7rem;
-  }
-  .links a {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.4rem;
-    padding: 0.5rem 0.9rem;
-    background: var(--bg-panel);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    color: var(--text);
-    text-decoration: none;
-    font-size: 0.78rem;
-    font-weight: 500;
-    transition: border-color 0.15s ease, background 0.15s ease;
-  }
-  .links a:hover { border-color: var(--accent); background: #16181d; }
-  .links a svg {
-    width: 16px;
-    height: 16px;
-    flex-shrink: 0;
-  }
-
-  footer {
-    text-align: center;
-    color: #5c5e64;
-    font-size: 0.7rem;
-    padding: 1.5rem 1.5rem;
-    border-top: 1px solid var(--border);
-  }
+.page{display:none;animation:pageIn .22s ease}
+.page.active{display:block}
+@keyframes pageIn{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:none}}
 </style>
 </head>
+
 <body>
-<div class="noise"></div>
 
-<header>
-  <div class="eyebrow">Software Developer</div>
-  <h1>Sidd Techx</h1>
-  <span class="signature">Siddharth</span>
-  <p class="tagline">Building bots, tools and automation — from France</p>
+<aside class="sidebar">
+  <div class="sidebar-head">
+    <img class="sidebar-logo" src="https://files.catbox.moe/m8yni9.png" alt="SIDD TECHX">
+    <div class="sidebar-brand">
+      <strong>SIDD TECHX</strong>
+      <small>CONTROL CENTER</small>
+    </div>
+  </div>
 
-  <div class="meta-row">
-    <span class="pill">France</span>
-    <span class="pill">FR · EN · ES · PT</span>
+  <div class="side-label">MENU</div>
+  <nav class="side-nav">
+    <a href="#home" data-page="home" class="active">
+      <span class="side-icon">➜</span>Home
+    </a>
+    <a href="#projects" data-page="projects">
+      <span class="side-icon">›</span>Projects
+    </a>
+    <a href="#status" data-page="status">
+      <span class="side-icon">⌁</span>Status
+    </a>
+    <a href="#contact" data-page="contact">
+      <span class="side-icon">✉</span>Contact
+    </a>
+  </nav>
+
+  <div class="sidebar-bottom">
+    <strong>BLACK / RED / WHITE</strong>
+    © 2026 SIDD TECHX OFC<br>
+    CONTROL CENTER V1.0.0
+  </div>
+</aside>
+
+<div class="overlay" onclick="closeMenu()"></div>
+
+<header class="topbar">
+  <div class="top-left">
+    <button class="menu-btn" onclick="toggleMenu()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="breadcrumb">
+      CONTROL CENTER <b>/</b> <span id="breadcrumbPage">HOME</span>
+    </div>
+  </div>
+
+  <div class="online">
+    <span class="online-dot"></span>
+    <span>ONLINE</span>
   </div>
 </header>
 
 <main>
-  <section>
-    <h2>About</h2>
-    <p>
-      Sidd Techx, also known as Siddharth, is a software developer and bot creator
-      based in France. Focused on JavaScript, TypeScript, Node.js, automation
-      and open-source tools, with projects spanning bots, scripts and developer utilities.
-    </p>
-  </section>
+<div class="container">
 
-  <section>
-    <h2>Profile</h2>
-    <div class="info-grid">
-      <div class="info-cell">
-        <div class="label">Developer name</div>
-        <div class="value">Sidd Techx</div>
-      </div>
-      <div class="info-cell">
-        <div class="label">Real name</div>
-        <div class="value">Siddharth</div>
-      </div>
-      <div class="info-cell">
-        <div class="label">Location</div>
-        <div class="value">France</div>
-      </div>
-      <div class="info-cell">
-        <div class="label">Languages</div>
-        <div class="value">French, English, Spanish, Portuguese</div>
-      </div>
-    </div>
-  </section>
+<section id="page-home" class="page active">
+<div class="container">
+<section class="hero">
+  <div class="kicker"><i></i> SOFTWARE DEVELOPER • BOT CREATOR</div>
+  <h1>SIDD <span>TECHX</span><br>OFC</h1>
+  <p>SOFTWARE DEVELOPER AND BOT CREATOR BASED IN FRANCE. BUILDING WITH JAVASCRIPT, TYPESCRIPT, NODE.JS AND AUTOMATION TOOLS.</p>
+</section>
 
-  <section>
-    <h2>Projects</h2>
-    <p>
-      Open-source bots, automation scripts and developer tools.
-      The full list of repositories is available on GitHub, and live
-      projects are showcased on the website above.
-    </p>
-  </section>
+<section class="card">
+  <div class="card-title"><h2>PROFILE</h2><span class="badge">SIDDHARTH</span></div>
+  <div class="info-grid">
+    <div class="info-cell"><div class="label">DEVELOPER NAME</div><div class="value">SIDD TECHX</div></div>
+    <div class="info-cell"><div class="label">REAL NAME</div><div class="value">SIDDHARTH</div></div>
+    <div class="info-cell"><div class="label">LOCATION</div><div class="value">FRANCE</div></div>
+    <div class="info-cell"><div class="label">LANGUAGES</div><div class="value">FRENCH, ENGLISH, SPANISH, PORTUGUESE</div></div>
+  </div>
+  <div class="about" style="margin-top:18px">
+    <b>SIDD TECHX</b>, ALSO KNOWN AS SIDDHARTH, IS A SOFTWARE DEVELOPER AND BOT CREATOR BASED IN FRANCE. FOCUSED ON JAVASCRIPT, TYPESCRIPT, NODE.JS, AUTOMATION AND OPEN-SOURCE TOOLS, WITH PROJECTS SPANNING BOTS, SCRIPTS AND DEVELOPER UTILITIES.
+  </div>
+</section>
+</div>
+</section>
 
-  <section>
-    <h2>Find me online</h2>
-    <div class="links">
-      <a class="cta" href="https://sidd-xmd.up.railway.app/#pairing" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-        Website
-      </a>
-      <a href="https://github.com/siddtechx" rel="me noopener">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.78-.25.78-.55 0-.27-.01-1.17-.02-2.12-3.2.7-3.88-1.36-3.88-1.36-.52-1.34-1.28-1.7-1.28-1.7-1.04-.72.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.47.11-3.06 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 2.9-.39c.98 0 1.97.13 2.9.39 2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.77.11 3.06.74.8 1.19 1.83 1.19 3.09 0 4.43-2.7 5.4-5.28 5.69.42.36.78 1.08.78 2.18 0 1.57-.01 2.84-.01 3.23 0 .3.2.66.79.55A10.52 10.52 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"/></svg>
-        GitHub
-      </a>
-      <a href="https://www.instagram.com/siiddhrts?igsh=MW9pZzF6czdvMWcxOQ==" rel="me noopener">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-        Instagram
-      </a>
-    </div>
-  </section>
+<section id="page-projects" class="page">
+<div class="container">
+<section class="page-title"><h1>MY <span>PROJECTS</span></h1><p>LIVE PROJECTS, BOTS AND CHANNELS BUILT BY SIDD TECHX OFC.</p></section>
+
+<section class="card">
+  <div class="card-title"><h2>LIVE PROJECTS</h2><span class="badge">SIDD MINI BOT</span></div>
+  <div class="project-grid">
+    <a class="project-item" href="https://sidd-xmd.up.railway.app/#pairing" target="_blank" rel="noopener">
+      <div class="project-left"><div class="project-icon">⌁</div><div class="project-text"><strong>SIDD XMD</strong><span>sidd-xmd.up.railway.app/#pairing</span></div></div>
+      <div class="project-arrow">↗</div>
+    </a>
+    <a class="project-item" href="https://sidd.zone.id/#pairing" target="_blank" rel="noopener">
+      <div class="project-left"><div class="project-icon">⌁</div><div class="project-text"><strong>SIDD ZONE</strong><span>sidd.zone.id/#pairing</span></div></div>
+      <div class="project-arrow">↗</div>
+    </a>
+  </div>
+</section>
+
+<section class="card" style="margin-top:16px">
+  <div class="card-title"><h2>CHANNELS &amp; GROUPS</h2><span class="badge">WHATSAPP</span></div>
+  <div class="channel-grid">
+    <a class="project-item" href="https://whatsapp.com/channel/0029Vb84KYs7j6g98LuAon1C" target="_blank" rel="noopener">
+      <div class="project-left"><div class="project-icon">◉</div><div class="project-text"><strong>CHANNEL 1</strong><span>WHATSAPP.COM/CHANNEL/0029VB84KYS7J6G98LUAON1C</span></div></div>
+      <div class="project-arrow">↗</div>
+    </a>
+    <a class="project-item" href="https://whatsapp.com/channel/0029Vb92P7z7IUYLr0yBNA2G" target="_blank" rel="noopener">
+      <div class="project-left"><div class="project-icon">◉</div><div class="project-text"><strong>CHANNEL 2</strong><span>WHATSAPP.COM/CHANNEL/0029VB92P7Z7IUYLR0YBNA2G</span></div></div>
+      <div class="project-arrow">↗</div>
+    </a>
+    <a class="project-item" href="https://chat.whatsapp.com/Ffdns4sciUGFPsHBrwK3c0" target="_blank" rel="noopener">
+      <div class="project-left"><div class="project-icon">◎</div><div class="project-text"><strong>GROUP</strong><span>CHAT.WHATSAPP.COM/FFDNS4SCIUGFPSHBRWK3C0</span></div></div>
+      <div class="project-arrow">↗</div>
+    </a>
+  </div>
+</section>
+</div>
+</section>
+
+<section id="page-status" class="page">
+<div class="container">
+<section class="page-title"><h1>SITE <span>STATUS</span></h1><p>VISITOR VIEWS AND ORIGIN COUNTRIES FOR THIS CONTROL CENTER.</p></section>
+
+<section class="card">
+  <div class="card-title"><h2>VISITOR ANALYTICS</h2><span class="badge ready" id="statusBadge">LIVE</span></div>
+
+  <div class="view-total">
+    <div><div class="lbl">TOTAL VIEWS</div><div class="num" id="totalViews">0</div></div>
+    <div style="text-align:right"><div class="lbl">YOUR BROWSER</div><div class="num" style="font-size:16px" id="yourCountry">—</div></div>
+  </div>
+
+  <div class="link-list-title">VIEWS BY COUNTRY</div>
+  <div id="countryList"></div>
+
+  <div class="link-list-title" style="margin-top:22px">VIEWS BY BROWSER</div>
+  <div id="browserList"></div>
+
+  <div class="disclaimer">
+    <b style="color:#888">NOTE:</b> THIS IS A SHARED COUNTER STORED ON THE SERVER — EVERY VISITOR ADDS TO THE SAME GLOBAL TOTAL. COUNTRY IS RESOLVED SERVER-SIDE FROM YOUR IP ADDRESS (NEVER STORED), AND BROWSER IS DETECTED FROM STANDARD, PUBLICLY-SENT BROWSER INFORMATION. NO PERSONAL DATA (NAME, EMAIL, EXACT IP) IS EVER COLLECTED OR STORED.
+  </div>
+</section>
+</div>
+</section>
+
+<section id="page-contact" class="page">
+<div class="container">
+<section class="page-title"><h1>CONTACT <span>ME</span></h1><p>CHOOSE YOUR PREFERRED WAY TO GET IN TOUCH WITH SIDD TECHX OFC.</p></section>
+
+<section class="card">
+  <div class="card-title"><h2>CONTACT SIDD TECHX</h2><span class="badge">GET IN TOUCH</span></div>
+  <div class="contact-grid">
+    <a class="contact-item" href="mailto:siddtechxofc@gmail.com">
+      <div class="contact-icon">✉</div><strong>EMAIL</strong><span>SIDDTECHXOFC@GMAIL.COM</span>
+    </a>
+    <a class="contact-item" href="https://wa.me/33751103165" target="_blank" rel="noopener">
+      <div class="contact-icon">◉</div><strong>WHATSAPP</strong><span>+33 7 51 10 31 65</span>
+    </a>
+    <a class="contact-item" href="https://www.instagram.com/siiddhrts?igsh=MW9pZzF6czdvMWcxOQ==" target="_blank" rel="noopener">
+      <div class="contact-icon">◎</div><strong>INSTAGRAM</strong><span>@SIIDDHRTS</span>
+    </a>
+  </div>
+  <div class="contact-note">FOR SUPPORT, QUESTIONS, OR COLLABORATION, CONTACT SIDD TECHX OFC USING ANY OF THE OPTIONS ABOVE.</div>
+</section>
+
+<section class="card" style="margin-top:16px">
+  <div class="card-title"><h2>SOCIAL &amp; CODE</h2><span class="badge">FIND ME ONLINE</span></div>
+  <div class="contact-grid">
+    <a class="contact-item" href="https://github.com/siddtechx" target="_blank" rel="me noopener">
+      <div class="contact-icon">⌘</div><strong>GITHUB</strong><span>GITHUB.COM/SIDDTECHX</span>
+    </a>
+  </div>
+</section>
+</div>
+</section>
+
+</div>
 </main>
 
 <footer>
-  © 2026 Sidd Techx — Siddharth
+  <b>©MADE IN BY SIDD TECHX OFC • CONTROL CENTER V1.0.0</b>
 </footer>
+
+<script>
+function toggleMenu(){
+  document.body.classList.toggle('sidebar-open');
+}
+function closeMenu(){
+  document.body.classList.remove('sidebar-open');
+}
+
+const pageNames = {
+  home: 'HOME',
+  projects: 'PROJECTS',
+  status: 'STATUS',
+  contact: 'CONTACT'
+};
+
+function showPage(name, updateHash=true){
+  if(!pageNames[name]) name='home';
+
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  const target=document.getElementById('page-'+name);
+  if(target) target.classList.add('active');
+
+  document.querySelectorAll('.side-nav a').forEach(a=>{
+    a.classList.toggle('active', a.dataset.page===name);
+  });
+
+  document.getElementById('breadcrumbPage').textContent=pageNames[name];
+
+  if(updateHash) history.replaceState(null,'','#'+name);
+  closeMenu();
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+document.querySelectorAll('.side-nav a').forEach(link=>{
+  link.addEventListener('click',function(e){
+    e.preventDefault();
+    showPage(this.dataset.page);
+  });
+});
+
+window.addEventListener('hashchange',()=>{
+  showPage(location.hash.replace('#','') || 'home', false);
+});
+
+document.addEventListener('keydown',e=>{
+  if(e.key==='Escape') closeMenu();
+});
+
+showPage(location.hash.replace('#','') || 'home', false);
+
+/* ============================================================
+   VISITOR COUNTER — real shared counter via backend API.
+   Every visitor (any browser, anywhere) adds to the SAME global
+   total stored server-side. The server resolves the visitor's
+   country from their IP (never stored) and detects their browser
+   family from the standard User-Agent header sent automatically
+   by every browser — no personal data (name, email, IP) is ever
+   collected or stored.
+
+   IMPORTANT: set API_BASE to wherever server.js is deployed
+   (e.g. Railway). If left as '' it assumes the API is served
+   from the same origin as this page.
+   ============================================================ */
+const API_BASE = ''; // e.g. 'https://your-tracker.up.railway.app'
+
+const FLAGS = {
+  France:'🇫🇷', 'United States':'🇺🇸', 'United Kingdom':'🇬🇧', Germany:'🇩🇪', Spain:'🇪🇸',
+  Portugal:'🇵🇹', Brazil:'🇧🇷', Nigeria:'🇳🇬', Ghana:'🇬🇭', India:'🇮🇳', Canada:'🇨🇦',
+  Morocco:'🇲🇦', Algeria:'🇩🇿', Tunisia:'🇹🇳', Senegal:'🇸🇳', 'Ivory Coast':'🇨🇮',
+  Mali:'🇲🇱', Cameroon:'🇨🇲', 'DR Congo':'🇨🇩', Congo:'🇨🇬',
+  Belgium:'🇧🇪', Switzerland:'🇨🇭', Italy:'🇮🇹', Netherlands:'🇳🇱', Mexico:'🇲🇽',
+  Philippines:'🇵🇭', Pakistan:'🇵🇰', Bangladesh:'🇧🇩', Unknown:'🌐'
+};
+
+const BROWSER_ICONS = {
+  Chrome:'⌾', Firefox:'✱', Safari:'◈', Edge:'◫', Opera:'◐', 'Samsung Internet':'◧', Other:'⌘'
+};
+
+function renderBarList(containerId, dataObj, total, iconMap, fallbackIcon){
+  const entries = Object.entries(dataObj).sort((a,b)=>b[1]-a[1]);
+  const listEl = document.getElementById(containerId);
+  listEl.innerHTML = '';
+
+  if(!entries.length){
+    listEl.innerHTML = '<div style="color:#444;font-size:10px;padding:10px 0">NO DATA YET</div>';
+    return;
+  }
+
+  entries.forEach(([name,count])=>{
+    const pct = total ? Math.round((count/total)*100) : 0;
+    const icon = iconMap[name] || fallbackIcon;
+    const row = document.createElement('div');
+    row.className = 'country-row';
+    row.innerHTML = `
+      <div class="country-flag">${icon}</div>
+      <div class="country-info">
+        <div class="country-name"><span>${name.toUpperCase()}</span><b>${pct}%</b></div>
+        <div class="country-bar"><div class="country-bar-fill" style="width:${pct}%"></div></div>
+      </div>`;
+    listEl.appendChild(row);
+  });
+}
+
+function detectBrowserLabel(){
+  const ua = navigator.userAgent.toLowerCase();
+  if(ua.includes('edg/')) return 'Edge';
+  if(ua.includes('opr/') || ua.includes('opera')) return 'Opera';
+  if(ua.includes('samsungbrowser')) return 'Samsung Internet';
+  if(ua.includes('firefox')) return 'Firefox';
+  if(ua.includes('chrome') || ua.includes('crios')) return 'Chrome';
+  if(ua.includes('safari') && !ua.includes('chrome')) return 'Safari';
+  return 'Other';
+}
+
+async function loadAndRenderStats(){
+  try{
+    const r = await fetch(API_BASE + '/api/stats');
+    const d = await r.json();
+    document.getElementById('totalViews').textContent = d.total || 0;
+    renderBarList('countryList', d.countries || {}, d.total || 0, FLAGS, '🌐');
+    renderBarList('browserList', d.browsers || {}, d.total || 0, BROWSER_ICONS, '⌘');
+  }catch(e){
+    document.getElementById('countryList').innerHTML = '<div style="color:#444;font-size:10px;padding:10px 0">STATS UNAVAILABLE</div>';
+    document.getElementById('browserList').innerHTML = '';
+  }
+}
+
+async function recordVisit(){
+  document.getElementById('yourCountry').textContent = detectBrowserLabel().toUpperCase();
+
+  const alreadyThisSession = sessionStorage.getItem('siddVisitCounted');
+  if(!alreadyThisSession){
+    sessionStorage.setItem('siddVisitCounted','1');
+    try{
+      await fetch(API_BASE + '/api/visit', { method: 'POST' });
+    }catch(e){ /* backend unreachable -> stats just won't update this time */ }
+  }
+  loadAndRenderStats();
+}
+
+recordVisit();
+</script>
 
 </body>
 </html>
