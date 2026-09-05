@@ -90,7 +90,7 @@ label{display:block;color:#aaa;font-size:10px;font-weight:700;letter-spacing:1px
 .link-list{margin-top:26px}
 .link-list-title{color:#4d4d4d;font-size:8px;letter-spacing:1.7px;text-transform:uppercase;margin:0 0 10px}
 .country-row{display:flex;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid #1c1c1c}.country-row:last-child{border-bottom:0}
-.country-flag,.browser-icon{font-size:18px;flex:0 0 auto;width:22px;text-align:center}
+.country-flag{font-size:18px;flex:0 0 auto}
 .country-info{flex:1;min-width:0}.country-name{font-size:11px;color:#eee;margin-bottom:6px;display:flex;justify-content:space-between;gap:8px}.country-name b{color:var(--red);font-family:var(--display);font-size:10px}
 .country-bar{height:6px;border-radius:4px;background:#171717;overflow:hidden}.country-bar-fill{height:100%;background:linear-gradient(90deg,var(--red),var(--red2));border-radius:4px;transition:width .6s ease}
 .view-total{display:flex;align-items:center;justify-content:space-between;padding:20px;background:#050505;border:1px dashed #3b3b3b;border-radius:12px;margin-bottom:18px}
@@ -171,7 +171,7 @@ footer{margin-left:var(--sidebar);border-top:1px solid #1c1c1c;text-align:center
 </section>
 
 <section class="card">
-  <div class="card-title"><h2>PROFILE</h2><span class="badge">SIDDHARTH</span></div>
+  <div class="card-title"><h2>PROFILE</h2><span class="badge">SIDDHARTHS</span></div>
   <div class="info-grid">
     <div class="info-cell"><div class="label">DEVELOPER NAME</div><div class="value">SIDD TECHX</div></div>
     <div class="info-cell"><div class="label">REAL NAME</div><div class="value">SIDDHARTHS</div></div>
@@ -179,7 +179,7 @@ footer{margin-left:var(--sidebar);border-top:1px solid #1c1c1c;text-align:center
     <div class="info-cell"><div class="label">LANGUAGES</div><div class="value">FRENCH, ENGLISH, SPANISH, PORTUGUESE</div></div>
   </div>
   <div class="about" style="margin-top:18px">
-    <b>SIDD TECHX</b>, ALSO KNOWN AS SIDDHARTH, IS A SOFTWARE DEVELOPER AND BOT CREATOR BASED IN FRANCE. FOCUSED ON JAVASCRIPT, TYPESCRIPT, NODE.JS, AUTOMATION AND OPEN-SOURCE TOOLS, WITH PROJECTS SPANNING BOTS, SCRIPTS AND DEVELOPER UTILITIES.
+    <b>SIDD TECHX</b>, ALSO KNOWN AS SIDDHARTHS, IS A SOFTWARE DEVELOPER AND BOT CREATOR BASED IN FRANCE. FOCUSED ON JAVASCRIPT, TYPESCRIPT, NODE.JS, AUTOMATION AND OPEN-SOURCE TOOLS, WITH PROJECTS SPANNING BOTS, SCRIPTS AND DEVELOPER UTILITIES.
   </div>
 </section>
 </div>
@@ -232,17 +232,13 @@ footer{margin-left:var(--sidebar);border-top:1px solid #1c1c1c;text-align:center
 
   <div class="view-total">
     <div><div class="lbl">TOTAL VIEWS</div><div class="num" id="totalViews">0</div></div>
-    <div style="text-align:right"><div class="lbl">YOUR BROWSER</div><div class="num" style="font-size:16px" id="yourCountry">—</div></div>
+    <div style="text-align:right"><div class="lbl">YOUR COUNTRY</div><div class="num" style="font-size:16px" id="yourCountry">—</div></div>
   </div>
 
-  <div class="link-list-title">VIEWS BY COUNTRY</div>
   <div id="countryList"></div>
 
-  <div class="link-list-title" style="margin-top:22px">VIEWS BY BROWSER</div>
-  <div id="browserList"></div>
-
   <div class="disclaimer">
-    <b style="color:#888">NOTE:</b> THIS IS A SHARED COUNTER STORED ON THE SERVER — EVERY VISITOR ADDS TO THE SAME GLOBAL TOTAL. COUNTRY IS RESOLVED SERVER-SIDE FROM YOUR IP ADDRESS (NEVER STORED), AND BROWSER IS DETECTED FROM STANDARD, PUBLICLY-SENT BROWSER INFORMATION. NO PERSONAL DATA (NAME, EMAIL, EXACT IP) IS EVER COLLECTED OR STORED.
+    <b style="color:#888">NOTE:</b> THIS COUNTER IS STORED LOCALLY IN YOUR BROWSER (NOT A SHARED GLOBAL SERVER COUNT). IT TRACKS VIEWS AND DETECTED COUNTRIES FOR VISITS MADE FROM THIS BROWSER ONLY. COUNTRY IS DETECTED VIA A PUBLIC IP LOOKUP API.
   </div>
 </section>
 </div>
@@ -337,36 +333,36 @@ document.addEventListener('keydown',e=>{
 showPage(location.hash.replace('#','') || 'home', false);
 
 /* ============================================================
-   VISITOR COUNTER — real shared counter via backend API.
-   Every visitor (any browser, anywhere) adds to the SAME global
-   total stored server-side. The server resolves the visitor's
-   country from their IP (never stored) and detects their browser
-   family from the standard User-Agent header sent automatically
-   by every browser — no personal data (name, email, IP) is ever
-   collected or stored.
-
-   IMPORTANT: set API_BASE to wherever server.js is deployed
-   (e.g. Railway). If left as '' it assumes the API is served
-   from the same origin as this page.
+   VISITOR COUNTER — stored in this browser's localStorage only.
+   This is NOT a shared/global counter across all visitors — it
+   has no backend. Each visitor's browser keeps its own tally.
+   Country is detected once per session via a free IP lookup API
+   (ipapi.co). If the lookup fails (offline, blocked, rate
+   limited), the visit is still counted under "Unknown".
    ============================================================ */
-const API_BASE = 'sidd-tracker.up.railway.app'; // e.g. 'https://your-tracker.up.railway.app'
-
 const FLAGS = {
   France:'🇫🇷', 'United States':'🇺🇸', 'United Kingdom':'🇬🇧', Germany:'🇩🇪', Spain:'🇪🇸',
   Portugal:'🇵🇹', Brazil:'🇧🇷', Nigeria:'🇳🇬', Ghana:'🇬🇭', India:'🇮🇳', Canada:'🇨🇦',
   Morocco:'🇲🇦', Algeria:'🇩🇿', Tunisia:'🇹🇳', Senegal:'🇸🇳', 'Ivory Coast':'🇨🇮',
-  Mali:'🇲🇱', Cameroon:'🇨🇲', 'DR Congo':'🇨🇩', Congo:'🇨🇬',
+  'Cote d\'Ivoire':'🇨🇮', Mali:'🇲🇱', Cameroon:'🇨🇲', 'DR Congo':'🇨🇩', Congo:'🇨🇬',
   Belgium:'🇧🇪', Switzerland:'🇨🇭', Italy:'🇮🇹', Netherlands:'🇳🇱', Mexico:'🇲🇽',
   Philippines:'🇵🇭', Pakistan:'🇵🇰', Bangladesh:'🇧🇩', Haïti:'🇭🇹', Unknown:'🌐'
 };
 
-const BROWSER_ICONS = {
-  Chrome:'⌾', Firefox:'✱', Safari:'◈', Edge:'◫', Opera:'◐', 'Samsung Internet':'◧', Other:'⌘'
-};
+function loadStats(){
+  try{ return JSON.parse(localStorage.getItem('siddStatusStats')||'{"total":0,"countries":{}}'); }
+  catch(e){ return {total:0,countries:{}}; }
+}
+function saveStats(s){
+  localStorage.setItem('siddStatusStats', JSON.stringify(s));
+}
 
-function renderBarList(containerId, dataObj, total, iconMap, fallbackIcon){
-  const entries = Object.entries(dataObj).sort((a,b)=>b[1]-a[1]);
-  const listEl = document.getElementById(containerId);
+function renderStats(){
+  const stats = loadStats();
+  document.getElementById('totalViews').textContent = stats.total;
+
+  const entries = Object.entries(stats.countries).sort((a,b)=>b[1]-a[1]);
+  const listEl = document.getElementById('countryList');
   listEl.innerHTML = '';
 
   if(!entries.length){
@@ -374,56 +370,43 @@ function renderBarList(containerId, dataObj, total, iconMap, fallbackIcon){
     return;
   }
 
-  entries.forEach(([name,count])=>{
-    const pct = total ? Math.round((count/total)*100) : 0;
-    const icon = iconMap[name] || fallbackIcon;
+  entries.forEach(([country,count])=>{
+    const pct = stats.total ? Math.round((count/stats.total)*100) : 0;
+    const flag = FLAGS[country] || '🌐';
     const row = document.createElement('div');
     row.className = 'country-row';
     row.innerHTML = `
-      <div class="country-flag">${icon}</div>
+      <div class="country-flag">${flag}</div>
       <div class="country-info">
-        <div class="country-name"><span>${name.toUpperCase()}</span><b>${pct}%</b></div>
+        <div class="country-name"><span>${country.toUpperCase()}</span><b>${pct}%</b></div>
         <div class="country-bar"><div class="country-bar-fill" style="width:${pct}%"></div></div>
       </div>`;
     listEl.appendChild(row);
   });
 }
 
-function detectBrowserLabel(){
-  const ua = navigator.userAgent.toLowerCase();
-  if(ua.includes('edg/')) return 'Edge';
-  if(ua.includes('opr/') || ua.includes('opera')) return 'Opera';
-  if(ua.includes('samsungbrowser')) return 'Samsung Internet';
-  if(ua.includes('firefox')) return 'Firefox';
-  if(ua.includes('chrome') || ua.includes('crios')) return 'Chrome';
-  if(ua.includes('safari') && !ua.includes('chrome')) return 'Safari';
-  return 'Other';
-}
-
-async function loadAndRenderStats(){
-  try{
-    const r = await fetch(API_BASE + '/api/stats');
-    const d = await r.json();
-    document.getElementById('totalViews').textContent = d.total || 0;
-    renderBarList('countryList', d.countries || {}, d.total || 0, FLAGS, '🌐');
-    renderBarList('browserList', d.browsers || {}, d.total || 0, BROWSER_ICONS, '⌘');
-  }catch(e){
-    document.getElementById('countryList').innerHTML = '<div style="color:#444;font-size:10px;padding:10px 0">STATS UNAVAILABLE</div>';
-    document.getElementById('browserList').innerHTML = '';
-  }
-}
-
 async function recordVisit(){
-  document.getElementById('yourCountry').textContent = detectBrowserLabel().toUpperCase();
-
+  const stats = loadStats();
   const alreadyThisSession = sessionStorage.getItem('siddVisitCounted');
+
   if(!alreadyThisSession){
+    stats.total += 1;
     sessionStorage.setItem('siddVisitCounted','1');
+
+    let country = 'Unknown';
     try{
-      await fetch(API_BASE + '/api/visit', { method: 'POST' });
-    }catch(e){ /* backend unreachable -> stats just won't update this time */ }
+      const r = await fetch('https://ipapi.co/json/');
+      const d = await r.json();
+      if(d && d.country_name) country = d.country_name;
+    }catch(e){ /* offline or blocked -> stays Unknown */ }
+
+    stats.countries[country] = (stats.countries[country]||0) + 1;
+    saveStats(stats);
+    document.getElementById('yourCountry').textContent = country.toUpperCase();
+  } else {
+    document.getElementById('yourCountry').textContent = 'ALREADY COUNTED';
   }
-  loadAndRenderStats();
+  renderStats();
 }
 
 recordVisit();
